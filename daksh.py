@@ -20,9 +20,9 @@ loop = asyncio.get_event_loop()
 
 TOKEN = '7125146756:AAGEc1B72NAKRIGSSBGC6uSkuGpu-O4xx5Y'
 MONGO_URI = 'mongodb+srv://sharp:sharp@sharpx.x82gx.mongodb.net/?retryWrites=true&w=majority&appName=SharpX'
-FORWARD_CHANNEL_ID = -4579695188
-CHANNEL_ID = -4579695188
-error_channel_id = -4579695188
+FORWARD_CHANNEL_ID = -1002464533692
+CHANNEL_ID = -1002464533692
+error_channel_id = -1002464533692
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
